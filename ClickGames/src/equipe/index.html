@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Equipe - Task Manager</title>
+  <link rel="stylesheet" href="./style.css">
+  <script defer src="./script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+  <!-- Header -->
+  <header class="main-header">
+    <button class="menu-toggle" aria-label="Abrir menu" onclick="toggleSidebar()">☰</button>
+    <div class="user-info">
+      <img src="../../assets/user.png" alt="Avatar do Usuário" class="user-avatar">
+      <div>
+        <h2>Nome do Usuário</h2>
+        <p>email@usuario.com</p>
+      </div>
+    </div>
+    <img src="../../assets/Logo1.png" alt="Logo da Empresa" class="company-logo">
+  </header>
+
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <nav class="sidebar-menu">
+      <ul>
+        <li><a href="../task/index.html">Tarefa</a></li>
+        <li><a href="./index.html" class="active">Equipe</a></li>
+        <li><a href="../perfil/index.html">Perfil</a></li>
+        <li><a href="../config/index.html">Configurações</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- Conteúdo Principal -->
+  <main class="content">
+    <div class="title-section">
+      <h1>Equipe</h1>
+      <p>Visualize e analise o desempenho da sua equipe.</p>
+    </div>
+
+    <!-- Filtros -->
+    <div class="filter-section shadow-box">
+      <label for="filter-team">Equipe:</label>
+      <select id="filter-team">
+        <option value="todos">Todos</option>
+        <option value="dev">Desenvolvimento</option>
+        <option value="design">Design</option>
+      </select>
+
+      <label for="filter-project">Projeto:</label>
+      <select id="filter-project">
+        <option value="todos">Todos</option>
+        <option value="projeto1">Projeto 1</option>
+        <option value="projeto2">Projeto 2</option>
+      </select>
+    </div>
+
+    <!-- Gráficos -->
+    <div class="chart-section">
+      <div class="chart-box shadow-box">
+        <h2>Projetos Criados</h2>
+        <canvas id="chart1"></canvas>
+      </div>
+      <div class="chart-box shadow-box">
+        <h2>Atividades Realizadas</h2>
+        <canvas id="chart2"></canvas>
+      </div>
+      <div class="chart-box shadow-box">
+        <h2>Produtividade</h2>
+        <canvas id="chart3"></canvas>
+      </div>
+    </div>
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+</html>
