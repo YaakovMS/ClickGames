@@ -1,0 +1,138 @@
+/* Importando a fonte Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+/* Estilo para o body */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+}
+
+/* Container principal */
+.login-container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Área da imagem */
+.login-image {
+    width: 75%;
+    height: 100%;
+    background: url('../../assets/image.png') no-repeat center center;
+    background-size: cover; /* Garante que a imagem cubra todo o espaço */
+}
+
+/* Área do formulário */
+.login-form {
+    width: 25%;
+    background: #fff;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Logo no topo */
+.login-form img {
+    width: 150px; /* Ajuste conforme o tamanho da logo */
+    height: auto;
+    display: block;
+    margin-bottom: 40px; /* Aumentando o espaço vertical entre a logo e a frase */
+}
+
+/* Título - Acesse sua conta */
+.login-form h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500; /* Usando Montserrat Medium */
+    color: #282644;
+    font-size: 24px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Estilo para os campos do formulário */
+.login-form .form-label {
+    color: #282644;
+    font-weight: 500;
+}
+
+.login-form .form-control {
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    padding: 10px;
+}
+
+/* Placeholder */
+.login-form .form-control::placeholder {
+    color: #aaa;
+}
+/* Estilo do botão, para garantir que o link tenha o mesmo visual do botão */
+#loginButton {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #282644; /* A cor do botão */
+  color: #fff; /* Cor do texto */
+  text-align: center;
+  text-decoration: none; /* Remove o sublinhado padrão de links */
+  border: 1px solid #282644; /* Borda do botão */
+  border-radius: 5px; /* Bordas arredondadas */
+  font-size: 16px; /* Tamanho da fonte */
+  transition: background-color 0.3s ease; /* Efeito de transição */
+  width: 100%;
+}
+
+/* Efeito de hover */
+#loginButton:hover {
+  background-color: #323052; /* Cor de fundo ao passar o mouse */
+  border-color: #323052;
+  text-decoration: none; /* Garantir que o link não tenha sublinhado no hover */
+}
+
+
+/* Links de "Esqueci minha senha" e "Criar conta" */
+.login-form .forgot-password,
+.login-form .create-account {
+    color: #282644;  /* Removendo o azul e colocando o tom do título */
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500; /* Um pouco mais pesado que o normal para destaque */
+    transition: color 0.3s ease;
+}
+
+.login-form .forgot-password:hover,
+.login-form .create-account:hover {
+    color: #3e3750; /* Alterando para uma cor mais clara no hover */
+    text-decoration: underline;
+}
+
+/* Espaçamento entre o link e o botão */
+.login-form .forgot-password {
+    margin-top: 10px;
+}
+
+.login-links {
+    margin-top: 15px;
+    text-align: center;
+}
+
+/* Estilo responsivo */
+@media (max-width: 768px) {
+    .login-image {
+        display: none;
+    }
+
+    .login-form {
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+    }
+}
