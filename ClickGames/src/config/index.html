@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Configurações - Task Manager</title>
+  <link rel="stylesheet" href="../config/style.css">
+  <script defer src="../config/script.js"></script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="main-header">
+    <button class="menu-toggle" aria-label="Abrir menu" onclick="toggleSidebar()">☰</button>
+    
+    <!-- Informações do usuário (exibidas quando o sidebar estiver ativo) -->
+    <div class="user-info">
+      <img src="../../assets/user.png" alt="Avatar do Usuário" class="user-avatar">
+      <div>
+        <h2>Nome do Usuário</h2>
+        <p>email@usuario.com</p>
+      </div>
+    </div>
+
+    <!-- Logo da empresa (exibida quando o sidebar estiver oculto) -->
+    <img src="../../assets/Logo1.png" alt="Logo da Empresa" class="company-logo">
+  </header>
+
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <nav class="sidebar-menu">
+      <ul>
+        <li><a href="../Task/index.html">Tarefa</a></li>
+        <li><a href="../equipe/index.html">Equipe</a></li>
+        <li><a href="../perfil/index.html">Perfil</a></li>
+        <li><a href="../config/index.html" class="active">Configurações</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- Conteúdo principal -->
+  <div class="content">
+    <h1 class="config-title">Configurações</h1>
+
+    <!-- Área de Configurações -->
+    <div class="config-container">
+      <!-- Card de Informações de Usuário -->
+      <div class="card user-info-card">
+        <div class="info-card">
+          <label for="label">Label</label>
+          <input type="text" id="label" value="Usuário" class="editable">
+          
+          <label for="group">Grupo</label>
+          <input type="text" id="group" value="Desenvolvimento" class="editable">
+          
+          <label for="cargo">Cargo</label>
+          <input type="text" id="cargo" value="Desenvolvedor Front-End" class="editable">
+        </div>
+        <span class="edit-icon" onclick="toggleEdit()">✎</span>
+      </div>
+
+      <!-- Card de Tarefas -->
+      <div class="card smaller-card tarefa-card">
+        <p><strong>Tarefas</strong></p>
+        <ul>
+          <li>Todo: 3</li>
+          <li>In Progress: 2</li>
+          <li>Done: 5</li>
+        </ul>
+      </div>
+
+      <!-- Card de Equipe -->
+      <div class="card smaller-card equipe-card">
+        <p><strong>Equipe</strong></p>
+        <ul>
+          <li>Equipe 1</li>
+          <li>Equipe 2</li>
+          <li>Equipe 3</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="../task/script.js"></script>
+</body>
+</html>
