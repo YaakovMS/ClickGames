@@ -494,3 +494,60 @@ body, html {
     }
   }
   
+  /* Centralizar conteúdo do modal */
+.task-modal, .task-detail-modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Centralizar o formulário de criação de tarefa */
+#new-task-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Estilizando inputs e botões para ficarem mais consistentes */
+#new-task-form input,
+#new-task-form textarea,
+#new-task-form select {
+  width: 80%; /* Diminui um pouco a largura para dar margem */
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #333;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#new-task-form button {
+  background-color: #282644;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  width: 80%; /* Alinha o botão ao mesmo tamanho dos campos */
+}
+
+#new-task-form button:hover {
+  background-color: #1e1b38;
+}
+
+/* Detalhes da tarefa */
+.task-detail-modal .modal-content {
+  text-align: center; /* Centraliza o conteúdo horizontalmente */
+}
+
+.task-detail-modal .task-desc {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #333;
+}
